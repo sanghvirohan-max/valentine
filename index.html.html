@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For Ratdae 💕</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffd1dc, #ffe6f0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Georgia", serif;
+    }
+
+    .card {
+      background: white;
+      padding: 45px 35px;
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      max-width: 380px;
+      width: 90%;
+    }
+
+    h1 {
+      color: #d6336c;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+
+    .subtitle {
+      font-size: 17px;
+      color: #444;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    .buttons {
+      position: relative;
+      height: 110px;
+    }
+
+    button {
+      padding: 12px 28px;
+      font-size: 16px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    #yes {
+      background-color: #ff5c8a;
+      color: white;
+    }
+
+    #yes:hover {
+      transform: scale(1.1);
+    }
+
+    #no {
+      background-color: #e0e0e0;
+      color: #555;
+      position: absolute;
+      left: 55%;
+      top: 0;
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #777;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>Ratdae 💕</h1>
+
+    <div class="subtitle">
+      Out of all the people in the world,<br>
+      somehow it was always you.<br><br>
+      So I have to ask…
+    </div>
+
+    <h1 style="font-size:22px;">Will you be my Valentine?</h1>
+
+    <div class="buttons">
+      <button id="yes" onclick="yesClicked()">Yes 💖</button>
+      <button id="no">No 🙃</button>
+    </div>
+
+    <div class="footer">
+      “It’s you. That’s the whole story.”
+    </div>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+
+    function moveNoButton() {
+      const x = Math.random() * 220 - 110;
+      const y = Math.random() * 80 - 40;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    }
+
+    noBtn.addEventListener("mouseenter", moveNoButton);
+    noBtn.addEventListener("click", moveNoButton);
+
+    function yesClicked() {
+      document.body.innerHTML = `
+        <div style="
+          height:100vh;
+          display:flex;
+          flex-direction:column;
+          align-items:center;
+          justify-content:center;
+          background:linear-gradient(135deg,#ffd1dc,#ffe6f0);
+          font-family:Georgia, serif;
+          text-align:center;
+          padding:20px;
+        ">
+          <h1 style="color:#d6336c;">It was always you 💖</h1>
+          <p style="font-size:20px; max-width:500px; line-height:1.6;">
+            Thank you for choosing me.<br><br>
+            Every love song makes sense because of you,
+            and every future version of me has you in it.
+          </p>
+          <p style="margin-top:20px; font-style:italic; color:#555;">
+            Happy Valentine’s Day, Ratdae 🌸
+          </p>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
